@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Evenyos DOM</title>
+    <style>
+        /*clique*/
+        div#click{
+            background: rgb(250, 0, 0);
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+            height: 200px;
+            width: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        /*passar o mouse*/
+        div#pass{
+            background: rgb(4, 0, 248);
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            height: 300px;
+            width: 300px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!--Clicar com o mouse-->
+    <div id = "click" onclick="clicar()">
+        Interaja clicando...
+    </div>
+
+
+    <!--Passar o mouse-->
+    <div id = "pass" onmouseenter="passar()" onmouseout="sair()">
+            Interaja passando o mouse...
+        </div>
+
+    <script>
+        //clicar com o mouse
+        function clicar() {
+            var click = window.document.getElementById('click')
+            click.innerText = 'Você clicou'
+        }
+
+        //passar o mouse
+        function passar() {
+            //substituir texto
+            var pass = window.document.getElementById('pass')
+            pass.innerText = 'Você passou o mouse!!!'
+        }
+
+        function sair() {
+            //substituir texto
+            var out = window.document.getElementById('pass')
+            pass.innerText = 'Interaja passando o mouse...'
+        }
+    </script>
+</body>
+</html>
