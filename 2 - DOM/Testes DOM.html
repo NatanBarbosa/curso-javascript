@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+
+    <style>
+        body{
+            background-color: #5b99eb;
+            color: white;
+            font: Comic 18pt; 
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Iniciando Estudos de DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong id="precto">DOM</strong> em JavaScript</p>
+    <div id="msg">clique em mim</div>
+
+    <script>
+        /*
+        window.document.writeln('ola mundo')
+        window.document.writeln(window.document.charset)
+        window.document.writeln(window.navigator.appName)
+        window.document.writeln(window.document.URL)
+        
+        //Selecionando pelas tags
+        var p1 = window.document.getElementsByTagName('p')[0]
+        document.writeln(p1.innerText)
+        p1.style.color = 'blue'
+
+        var corpo = window.document.body
+        corpo.style.background = 'black'
+        */
+
+        //selecionando por ID
+        /*var negin = document.getElementById('precto')
+        negin.style.color = 'black'
+        var divi = document.getElementById('msg')
+        divi.style.color = 'red'
+        */
+
+        //por seletor
+        var divi = window.document.querySelector('div#msg')
+        divi.style.color = 'blue'
+
+
+
+
+
+
+    </script>
+</body>
+</html>

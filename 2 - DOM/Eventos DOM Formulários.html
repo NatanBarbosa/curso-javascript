@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Evento legal</title>
+
+    <style>
+        input {
+            font: normal 18pt arial;
+            width: 100px;
+        }
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <!--Criando inputs para servirem de caixa de texto para o usuário digitar seus números-->
+    <input type="number" name="txtn1" id="txtn1"> + <!--O 'name' e o 'id' pode ser iguais nesse caso, pois não vou usar o 'name'-->
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()"> <!--Botão que vai disparar a função que faz a soma -->
+
+
+    <h3 id="res">resultado<h3>
+    <script>
+        function somar() {
+            var tn1 = document.getElementById("txtn1") //pegar pelo o Id o texto da primeira caixa que o usuário digitou
+            var tn2 = document.getElementById("txtn2") //pegar pelo Id o texto da segunda caixa que o usuário digitou
+            var resultado = document.getElementById("res") //pegar o 'valor' daquele div e transformar no resultado da soma
+            var n1 = parseFloat(tn1.value) //Transformar o valor (value) desses textos em números, para poder somar
+            var n2 = parseFloat(tn2.value) 
+            var soma = n1 + n2 //variável que vai guardar o valor da soma
+            resultado.innerHTML = "resultado: " + soma //exibir a soma
+
+        }
+    </script>
+</body>
+</html>
