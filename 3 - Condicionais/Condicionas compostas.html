@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estranjeiro?</title>
+</head>
+<body>
+    <h1>Seria você um estranjeiro?</h1>
+
+    Digite seu país: <input type="text" name="txtnac" id="txtnac">
+    <input type="button" value="Verificar!!!" onclick="Resultado()"> 
+
+    <p id="res"> </p>
+
+    <script>
+        function Resultado(){
+            var nac = document.getElementById('txtnac')
+            var nac = (nac.value)
+            var result = document.getElementById('res')
+            if (nac == 'Brasil') {
+                result.innerHTML = `Você é Brasileiro, pois mora no <strong>${nac}</strong>`
+            } else {
+                result.innerHTML = `você é estrangeiro, pois mora no <strong>${nac}</strong>`
+            }
+        }
+    </script>
+</body>
+</html>

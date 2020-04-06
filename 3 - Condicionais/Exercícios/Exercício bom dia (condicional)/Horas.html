@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="refresh" content="30">
+    <title>Horas do dia</title>
+    <link rel="stylesheet" type="text/css" href="cessi.css" />
+</head>
+
+<body onload="carregar()">
+    <header>
+        <h1>Que horas são?</h1>
+    </header>
+
+    <div id="interface">
+        <p>Agora são <a id="horas">horas</a> horas e <a id="min">minutos</a> minutos</p>
+        <img id="imagem" src="Bom-dia.png">
+        <p id="msg">Aqui vai outra mensagenzinha</p>
+
+    </div>
+
+    <footer>
+        <p>Esse algorítimo irá pegar as horas do seu relógio e colocar uma imagem adequada ao horário, com mensagenzinha 🥰</p>
+        <p>&copy; Nate Rock 2019</p>
+
+    </footer>
+
+    <script>
+        function carregar() {
+            //pegar as horas do computador
+            var horas1 = new Date()
+            var horas2 = horas1.getHours()
+            var minutos1 = new Date()
+            var minutos2 = minutos1.getMinutes()
+
+
+
+            //substituir no html
+            var horas3 = document.getElementById('horas')
+            horas3.innerHTML = horas2
+            var minutos3 = document.getElementById('min')
+            minutos3.innerHTML = minutos2
+
+            //colocar imagens de acordo com o horário            
+            var img = document.getElementById('imagem')
+            var msg = document.getElementById('msg')
+
+            if (horas2 > 4 & horas2 < 13) {
+                //bom dia
+                img.src = 'Bom-dia.png'
+                msg.innerHTML = 'Tenha um bom dia e tome café da manhã'
+                document.body.style.background = '#00abae'
+            } else if (horas2 >= 13 & horas2 < 18) {
+                img.src = 'boa-tarde.png'
+                    //boa tarde
+                msg.innerHTML = 'Tenha uma boa tarde e não esqueça de estudar'
+                document.body.style.background = '#fabe97'
+            } else if (horas2 >= 18 && horas2 < 24) {
+                //boa noite
+                img.src = 'boa-noite.png'
+                msg.innerHTML = 'Tenha uma boa noite e aproveite seu sono'
+                document.body.style.background = '#483D8B'
+            } else if (horas2 >= 0 && horas2 <= 4) {
+                //boa madrugs
+                img.src = 'boa-noite.png'
+                msg.innerHTML = 'Tenha uma boa noite e aproveite seu sono'
+                document.body.style.background = '#483D8B'
+            }
+
+            //mudar a cor de fundo do body
+        }
+    </script>
+</body>
+
+</html>

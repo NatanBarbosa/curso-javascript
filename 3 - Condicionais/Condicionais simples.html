@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Condição</title>
+
+    <style>
+        input#txtvel{
+            width: 50px;
+            background: border-box;
+            background-color: rgb(192, 192, 192);
+            color: blue;
+            font: normal 12pt arial;
+            
+        }
+
+        input#but{
+            background-attachment: fixed;
+            cursor: pointer;
+            padding: 3px;
+            
+         
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input id="but" type="button" value="Verificar!!!" onclick="somando()">
+
+    <p id="res">Resultado → </p>
+    
+    <script>
+        function somando(){
+            var txvel = document.getElementById('txtvel')
+            var vel = parseFloat(txvel.value)
+            var result = document.getElementById('res')
+            if(vel > 80) {
+                result.innerHTML += "Velocidade acima do limite. <strong>MULTADO!!!</strong>"
+            } 
+           result.innerHTML += '<p>Dirija sempre com sinto de segurança</p>' 
+        }
+    </script>
+</body>
+</html>
