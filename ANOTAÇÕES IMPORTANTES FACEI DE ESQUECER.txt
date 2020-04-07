@@ -1,0 +1,14 @@
+Usar document.write sem escrever em uma nova página:
+var result = document.getElementById('res')
+//Aqui ele vai pegar algum páragrafo, div, etc, que tenha o id "res" e armazena-lo na variável result
+do HTML para o javascript
+
+result.innerHTML += "Velocidade acima do limite. MULTADO!!!"
+//aqui ele vai pegar o que estava escrito no parágrafo e adicionar a frase "Velocidade acima..."
+dá até para adicionar tags de strong, p, br, etc dentro das aspas, pois é "inner.HTML" para deixar mais organizado
+
+Na hora de pegar o elemento da variavel do input e armazena-la em uma primeira variável, nuca se esqueça de
+criar uma outra variável para pegar o valor da primeira 
+Ex.: var n1= (n2.value)
+
+Alt + shift +F -> organiza o código
