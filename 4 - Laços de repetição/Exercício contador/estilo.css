@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(56, 155, 236);
+    font: normal 15pt arial;
+}
+
+p#peq {
+    font-size: 10pt;
+    margin-top: -15px;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.534);
+}
+
+footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contador</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+
+    </header>
+    <section>
+        <div>
+            <p>Início da contagem: <input type="number" name="txtnum" id="txtnum"></p>
+            <p>Fim da contagem: <input type="number" name="txtnum2" id="txtnum2"> </p>
+            <p>Passo: <input type="number" name="txtnum3" id="txtnum3" min="0"> </p>
+            <p id="peq">obs: Digite apenas números positivos↑</p>
+            <p><input type="button" value="Contar!!!" onclick="calcular()"></p>
+        </div>
+        <div id="res">
+            Calculando...
+        </div>
+    </section>
+    <footer>
+        <p>&copy; NateRock</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
